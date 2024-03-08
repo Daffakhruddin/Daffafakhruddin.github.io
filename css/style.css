@@ -9,7 +9,7 @@ body {
 /*navbar*/
 nav {
   display: flex;
-  background-color: coral;
+  background-color: skyblue;
   justify-content: space-around;
   /* padding: 20px 0; atas bawah 20  kiri kanan 0 */
   /* atur padding dengan flex */
