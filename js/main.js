@@ -1,13 +1,9 @@
- const mntoggle = document.querySelector('.menu-toggle input');
+ const mntoggle = document.querySelector('menu-toggle');
  const nav = document.querySelector('nav ul');
-
-mntoggle.addEventListener('click',function(){
-    nav.classList.toggle('menushow');
-})
 
 $(function(){
     //Mengambil data dari file Scrapped.json menggunakan fungsi $.getJSON() JQuery
-    $.get('headline.json', function(obj){
+    $.get('./js/headline.json', function(obj){
     //Tag tabel awal
     var str="<table border='1'>";
     //Judul tabel
@@ -28,3 +24,7 @@ $(function(){
     $('#headline_json').html(str);
     });
 });
+
+mntoggle.addEventListener('click',function(){
+    nav.classList.toggle('menushow');
+})

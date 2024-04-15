@@ -19,6 +19,6 @@ f=open('.\headline.json','w')
 for headline in obj.find_all('div',class_='container-lit'):
     for headline in obj.find_all('li',class_='list-group-item list-border conten1'):
         data.append({"judul":headline.find('h3').text.strip(),"kategori":headline.find('span',class_='kanal-info').text.strip(),"waktu_publish":headline.find('div',class_='date').text.strip().replace(headline.find('span',class_='kanal-info').text,'').strip(' - '),"waktu_scrapping":datetime.now().strftime("%d/%m/%Y, %H:%M:%S")})
-jdumps=json.dumps(data)
+jdumps=json.dumps(data,indent=4)
 f.writelines(jdumps)
 f.close()
